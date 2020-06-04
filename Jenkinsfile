@@ -25,9 +25,11 @@ node() {
         checkout scm
     }
 
-    stage('TEsting Job') {
+    stage('Testing Job') {
+        echo "${seperator60}\n${seperator20} Stage one job \n${seperator60}"
         sh """
-            ./test-script.sh 
+            echo "Drive this process"
+            bash test-script.sh 
         """
     }
 }
