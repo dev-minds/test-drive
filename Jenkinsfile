@@ -14,7 +14,7 @@ def seperator20 = '\u2739' * 20
 def seperator30 = '\u2739' * 30
 
 node() {
-    stage('fetch repo') {
+    stage('Fetch repo') {
         echo "${seperator60}\n${seperator20} Checking out Source Repo \n${seperator60}"
         deleteDir()
         checkout scm
@@ -25,6 +25,13 @@ node() {
         sh """
             echo "Drive this process"
             bash test-script.sh 
+        """
+    }
+
+    stage('Clean Up') {
+        echo "${seperator60}\n${seperator20} Clean Up Stage \n${seperator60}"
+        sh """
+            echo "End Task"
         """
     }
 }
