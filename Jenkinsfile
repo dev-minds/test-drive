@@ -7,7 +7,7 @@
   Status: Continouse Improvement 
 https://groovy-lang.org/semantics.html
 */
-jghg
+
 
 def seperator60 = '\u2739' * 60
 def seperator20 = '\u2739' * 20
