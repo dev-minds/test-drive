@@ -31,7 +31,8 @@ node() {
     stage('Clean Up') {
         echo "${seperator60}\n${seperator20} Clean Up Stage \n${seperator60}"
         sh """
-            echo "End Task"
+            echo -e "End Task"
+            hostsname -f 
         """
     }
 }
